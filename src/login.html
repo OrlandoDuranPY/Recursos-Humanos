@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar sesión</title>
-    <link href="/dist/output.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Hola</h1>
-</body>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./assets/img/nodejs.svg" type="image/x-icon">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="h-screen flex justify-center items-center bg-gray-100">
+    <section class="bg-white p-10 rounded-xl shadow-lg w-3/12">
+      <h1 class="font-bold text-2xl text-gray-600">Inicia sesión en tu <span class="text-cyan-400">cuenta.</span></h1>
+      <p class="text-sm text-gray-400">Taller de Node.JS S.A de C.V.</p>
+      <form class="space-y-4 mt-10">
+        <!-- Correo -->
+        <div class="space-y-2">
+            <label for="user_email" class="block text-sm font-semibold text-gray-600">Tu correo</label>
+            <input id="user_email" type="email" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="micorreo@email.com">
+        </div>
+        <!-- Password -->
+        <div class="space-y-2">
+            <label for="user_password" class="block text-sm font-semibold text-gray-600">Contraseña</label>
+            <input id="user_password" type="password" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="Escribe tu contraseña">
+        </div>
+
+        <p class="text-sm text-gray-400">¿No tienes una cuenta? <a href="signin.html" class="font-semibold text-cyan-400 hover:underline">Crea una cuenta nueva.</a> </p>
+
+        <button type="submit" class="bg-transparent py-2 px-4 rounded-lg text-cyan-400 border-2 border-cyan-400 font-semibold hover:bg-cyan-400 hover:text-white transition focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400">Iniciar sesión.</button>
+      </form>
+    </section>
+  </body>
 </html>
