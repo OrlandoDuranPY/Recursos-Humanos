@@ -4,7 +4,12 @@
   "description": "Proyecto del Curso de NodeJS (2023) de la Facultad de Informática UAQ",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrlandoDuranPY/Recursos-Humanos"
   },
   "keywords": [
     "API",
@@ -15,7 +20,8 @@
   "author": "OrlandoDuranPY",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"

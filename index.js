@@ -21,7 +21,7 @@ RUTAS
 ========================================= */
 app.get('/', (req, res, next) => {
     res.status(200);
-    res.send('Bienvenido');
+    res.send('Bienvenido a Recursos Humanos');
 });
 // app.get('/', index);
 // app.use('/user', user);
