@@ -21,7 +21,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "flowbite": "^1.6.5",
+    "nodemon": "^2.0.22",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"

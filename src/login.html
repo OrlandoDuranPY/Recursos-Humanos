@@ -11,6 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Otros -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
   </head>
   <body class="h-screen flex justify-center items-center bg-gray-100">
     <section class="bg-white p-10 rounded-xl shadow-lg w-3/12">
@@ -19,19 +26,20 @@
       <form class="space-y-4 mt-10">
         <!-- Correo -->
         <div class="space-y-2">
-            <label for="user_email" class="block text-sm font-semibold text-gray-600">Tu correo</label>
-            <input id="user_email" type="email" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="micorreo@email.com">
+            <label for="input_email" class="block text-sm font-semibold text-gray-600">Tu correo</label>
+            <input id="input_email" type="email" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="micorreo@email.com">
         </div>
         <!-- Password -->
         <div class="space-y-2">
-            <label for="user_password" class="block text-sm font-semibold text-gray-600">Contraseña</label>
-            <input id="user_password" type="password" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="Escribe tu contraseña">
+            <label for="input_password" class="block text-sm font-semibold text-gray-600">Contraseña</label>
+            <input id="input_password" type="password" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-cyan-400" placeholder="Escribe tu contraseña">
         </div>
 
-        <p class="text-sm text-gray-400">¿No tienes una cuenta? <a href="signin.html" class="font-semibold text-cyan-400 hover:underline">Crea una cuenta nueva.</a> </p>
+        <p class="text-sm text-gray-400">¿No tienes una cuenta? <span id="link_signin" class="font-semibold text-cyan-400 hover:underline">Crea una cuenta nueva.</span> </p>
 
-        <button type="submit" class="bg-transparent py-2 px-4 rounded-lg text-cyan-400 border-2 border-cyan-400 font-semibold hover:bg-cyan-400 hover:text-white transition focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400">Iniciar sesión.</button>
+        <button id="login_submit" type="submit" class="bg-transparent py-2 px-4 rounded-lg text-cyan-400 border-2 border-cyan-400 font-semibold hover:bg-cyan-400 hover:text-white transition focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400">Iniciar sesión.</button>
       </form>
     </section>
+    <script src="./assets/js/login.js"></script>
   </body>
 </html>
