@@ -1,4 +1,3 @@
-console.log('Login');
 window.onload = init;
 
 function init() {

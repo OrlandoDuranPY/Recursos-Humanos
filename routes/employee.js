@@ -47,20 +47,27 @@ empleado.put('/:id([0-9]{1,3})', async (req, res, next) => {
   const { name, last_name, phone, email, address } = req.body;
 
   if (name && last_name && phone && email && address) {
-    let query = `UPDATE employees SET name='${name}', last_name=${last_name},`;
-    query += `phone=${phone}, email=${email}, address=${address}  WHERE id=${req.params.id};`;
+    let query = `UPDATE employees SET name='${name}', last_name='${last_name}', `;
+    query += `phone='${phone}', email='${email}', address='${address}' WHERE id=${req.params.id};`;
 
-    const rows = await db.query(query);
-    console.log(rows);
+    try {
+      const rows = await db.query(query);
+      console.log(rows);
 
-    if (rows.affectedRows == 1) {
-      return res
-        .status(200)
-        .json({ code: 200, message: 'Empleado actualizado correctamente' });
+      if (rows.affectedRows === 1) {
+        return res.status(200).json({ code: 200, message: 'Empleado actualizado correctamente' });
+      } else {
+        return res.status(500).json({ code: 500, message: 'No se encontró el empleado o no se realizaron cambios' });
+      }
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ code: 500, message: 'Ocurrió un error' });
     }
-    return res.status(500).json({ code: 500, message: 'Ocurrió un error' });
+  } else {
+    return res.status(400).json({ code: 400, message: 'Faltan campos requeridos' });
   }
 });
+
 
 /* ========================================
 Modificar un empleado parcialmente
